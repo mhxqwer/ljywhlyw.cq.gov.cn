@@ -1,0 +1,845 @@
+@charset 'utf-8';
+
+/******样式清除******/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+a,
+span {
+    vertical-align: top;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+input,
+button,
+text {
+    vertical-align: top;
+    outline: none;
+    border: none;
+}
+
+button {
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+}
+
+textarea {
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+input,
+textarea {
+    box-sizing: content-box;
+    outline: none;
+    background: 0 0;
+    font-family: "Microsoft YaHei";
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #acacac;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #acacac;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #acacac;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #acacac;
+}
+
+table tr td,
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font-size: 0;
+    color: #000;
+    font-family: "Microsoft YaHei";
+    background-color: #f5f5f5;
+}
+
+.opacity90 {
+    background-color: #fff;
+    background-color: rgb(255, 255, 255, 0.9);
+    opacity: 0.9\0;
+    filter: alpha(opacity=90);
+}
+
+.w28 {
+    width: 28%;
+}
+
+.w70 {
+    width: 70%;
+}
+
+
+/*****通用样式******/
+
+
+/*清除浮动*/
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.db {
+    display: inline-block;
+}
+
+
+/* 文字溢出 */
+
+.e {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+/*第一种tab切换开始*/
+
+.com-tab {
+    width: 500px;
+    border: 1px solid #eee;
+}
+
+.tab-list {
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #eee
+}
+
+.tab-list a {
+    float: left;
+    width: 33.333%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    /*添加定位，在切换时不会跳动*/
+    position: relative;
+    top: -1px;
+}
+
+.tab-list a.cur {
+    border-bottom: 2px solid red;
+}
+
+.tab-list span {
+    float: left;
+    line-height: 40px;
+    margin-left: -6px;
+}
+
+.tab-item {
+    padding: 20px;
+}
+
+.tab-item a {
+    float: left;
+    line-height: 36px;
+    color: #666;
+    font-size: 14px;
+    max-width: 360px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tab-item span {
+    float: right;
+    line-height: 36px;
+    color: #999;
+    font-size: 12px;
+}
+
+
+/*第一种tab切换结束*/
+
+
+/*第二种tab切换开始*/
+
+.com-tab {
+    width: 500px;
+    border: 1px solid #eee;
+}
+
+.tab-list-bool {
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #eee
+}
+
+.tab-list-bool li {
+    float: left;
+    width: 33.333%;
+    height: 40px;
+    position: relative;
+    top: -1px;
+}
+
+.tab-list-bool a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.tab-list-bool li.cur a {
+    border-bottom: 2px solid red;
+}
+
+.tab-item {
+    padding: 20px;
+}
+
+.tab-item a {
+    float: left;
+    line-height: 36px;
+    color: #666;
+    font-size: 14px;
+    max-width: 360px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tab-item span {
+    float: right;
+    line-height: 36px;
+    color: #999;
+    font-size: 12px;
+}
+
+
+/*第二种tab切换结束*/
+
+
+/*左右轮播开始*/
+
+.banner-box,
+.banner-img {
+    height: 370px;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-img a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.banner-img img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.banner-txt {
+    height: 40px;
+    width: 100%;
+    background: url(../images/banner-opbg40.png);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.banner-txt a {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.banner-num {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 0px;
+}
+
+.banner-num span {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #fff;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.banner-num span.cur {
+    background: red;
+}
+
+.banner-index {
+    position: absolute;
+    bottom: 10px;
+    right: 140px;
+}
+
+.banner-index span {
+    color: #fff;
+    font-size: 14px;
+}
+
+.banner-index span.ban-dy {
+    font-size: 18px;
+}
+
+.banner-btn {
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    font-size: 40px;
+    color: #fff;
+    margin-top: -35px;
+    text-align: center;
+    line-height: 70px;
+    top: 50%;
+    background: url(../images/banner-opbg40.png);
+    cursor: pointer;
+    display: none;
+}
+
+.banner-left {
+    left: 0px;
+}
+
+.banner-right {
+    right: 0px;
+}
+
+.banner-box:hover .banner-btn {
+    display: block;
+}
+
+
+/*左右轮播结束*/
+
+
+/*上下轮播开始*/
+
+.news-line {
+    height: 50px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.news-icon {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    background: #ccc;
+    width: 100px;
+}
+
+.news-cont {
+    height: 50px;
+    width: 800px;
+    position: relative;
+    margin-left: 50px;
+    overflow: hidden;
+}
+
+.news-cont a {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    max-width: 800px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.news-btns {
+    margin: 4px 20px 0 0;
+}
+
+.news-btns span {
+    display: block;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #666;
+    font-size: 20px;
+    background: #eee;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.news-btns span:hover {
+    background: red;
+}
+
+
+/*上下轮播结束*/
+
+
+/*新闻头条滚动开始*/
+
+.roll-news-line {
+    height: 50px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.roll-news-icon {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    background: #ccc;
+    width: 100px;
+}
+
+.roll-news-cont {
+    height: 50px;
+    width: 800px;
+    position: relative;
+    margin-left: 50px;
+    overflow: hidden;
+}
+
+.roll-news-cont a {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    max-width: 800px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.roll-news-btns {
+    margin: 4px 20px 0 0;
+}
+
+.roll-news-btns span {
+    display: block;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #666;
+    font-size: 20px;
+    background: #eee;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.roll-news-btns span:hover {
+    background: red;
+}
+
+
+/*新闻头条滚动结束*/
+
+
+/*渐变轮播开始*/
+
+.fade-box,
+.fade-img {
+    height: 370px;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fade-img a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.fade-img img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.fade-txt {
+    height: 40px;
+    width: 100%;
+    background: url(../images/banner-opbg40.png);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.fade-txt a {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.dy-num {
+    position: absolute;
+    bottom: 5px;
+    right: 130px;
+}
+
+.dy-num span {
+    color: #fff;
+}
+
+.dy-index {
+    font-size: 26px;
+}
+
+.fade-num {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 0px;
+}
+
+.fade-num span {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #fff;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.fade-num span.cur {
+    background: red;
+}
+
+.fade-btn {
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    font-size: 40px;
+    color: #fff;
+    margin-top: -35px;
+    text-align: center;
+    line-height: 70px;
+    top: 50%;
+    background: url(../images/banner-opbg40.png);
+    cursor: pointer;
+    display: none;
+}
+
+.fade-left {
+    left: 0px;
+}
+
+.fade-right {
+    right: 0px;
+}
+
+.fade-box:hover .fade-btn {
+    display: block;
+}
+
+
+/*渐变轮播开始*/
+
+
+/*多张轮播其中一张轮播开始*/
+
+.ban-more-box {
+    width: 1200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: #efefef;
+}
+
+.ban-more-img {
+    width: 110%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.ban-more-img p {
+    float: left;
+    width: 222px;
+    height: 198px;
+    overflow: hidden;
+    /*margin:0 10px;*/
+    margin-right: 20px;
+    border: 1px solid #eee;
+}
+
+.ban-more-img .img-link {
+    height: 160px;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.ban-more-img .img-tit {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    line-height: 40px;
+}
+
+.ban-more-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ban-more-btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    height: 50px;
+    width: 30px;
+    background: url(../images/banner-opbg40.png);
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.ban-more-box:hover .ban-more-btn {
+    display: block;
+}
+
+.ban-more-left {
+    left: 1px;
+}
+
+.ban-more-right {
+    right: 1px;
+}
+
+
+/*多张轮播其中一张轮播结束*/
+
+
+/*多张滚动开始*/
+
+.ban-roll-box {
+    width: 1200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: #efefef;
+}
+
+.ban-roll-img {
+    width: 110%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.ban-roll-img p {
+    float: left;
+    width: 222px;
+    height: 198px;
+    overflow: hidden;
+    /*margin:0 10px;*/
+    margin-right: 20px;
+    border: 1px solid #eee;
+}
+
+.ban-roll-img .img-link {
+    height: 160px;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.ban-roll-img .img-tit {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    line-height: 40px;
+}
+
+.ban-roll-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ban-roll-btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    height: 50px;
+    width: 30px;
+    background: url(../images/banner-opbg40.png);
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.ban-roll-box:hover .ban-roll-btn {
+    display: block;
+}
+
+.ban-roll-left,
+.roll-left {
+    left: 1px;
+}
+
+.ban-roll-right,
+.roll-right {
+    right: 1px;
+}
+
+
+/*多张滚动结束*/
+
+
+/***当前位置样式***/
+
+.position {
+    margin: 17px 0 13px 10px;
+    font-size: 16px;
+    background: url(../images/position.png) center left no-repeat;
+    background-size: 13px 14px;
+    padding-left: 20px;
+    color: #666666;
+}
+
+.position a {
+    color: #666666;
+}
+
+.position a:hover {
+    color: #2760b7;
+}
+
+.position .gt {
+    margin: 0 3px;
+    font-size: 14px;
+}

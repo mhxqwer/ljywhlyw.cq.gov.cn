@@ -1,0 +1,65 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>404</title>
+  <!--站点类-->
+<meta name="SiteName" content="重庆市人民政府">
+<meta name="SiteDomain" content="http://www.cq.gov.cn">
+<meta name="SiteIDCode" content="5000000095">
+
+<!--栏目类-->
+<meta name="ColumnName" content="">
+  
+	<meta name="ColumnDescription" content="">
+
+
+  
+	<meta name="ColumnKeywords" content="">
+
+
+  
+	<meta name="ColumnType" content="">
+
+
+  <link rel="stylesheet" href="//www.cq.gov.cn/images/common.css">
+  <link rel="stylesheet" href="//www.cq.gov.cn/images/public.css">
+  <script type="text/javascript" src="//www.cq.gov.cn/images/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//www.cq.gov.cn/images/default.css">
+</head>
+<script>
+function goPAGE () {
+  if ((navigator.userAgent.match (/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    /*window.location.href="你的手机版地址";*/
+    var url=window.location.href;
+    if(url.indexOf('_wap.html')>=0){
+      window.location.replace(url.replace(/_wap.html/,'.html'));
+    }
+  } else {
+  }
+}
+goPAGE ();
+if(window.location.href.indexOf("/ywdt/jrzq/") > 0){
+window.location.href = window.location.href.replace("/ywdt/jrzq/","/ywdt/jrcq/")
+}
+if(window.location.href.indexOf("/zjzq/") > 0){
+window.location.href = window.location.href.replace("/zjzq/","/zjcq/")
+}
+</script>
+<body style="text-align:center;">
+<!--#include virtual="/ggbf_search/top/index.html"-->
+<div class="default">
+  <img class="default-img" src="//www.cq.gov.cn/images/404default1.jpg" />
+  <p>Error,页面出错啦！！    请点击返回或者刷新</p>
+  <div style="margin-bottom:70px;">
+    <a class="default-a1" href="/">返回首页</a>
+    <a class="default-a2" href="javascript:window.location.reload();">刷新试试</a>
+  </div>
+</div>
+<!--#include virtual="/ggbf_search/bottom/index.html"-->
+<script src="//www.cq.gov.cn/images/common.js"></script>
+<script src="//www.cq.gov.cn/images/public.js"></script>
+<script src="//www.cq.gov.cn/images/headfoot.js"></script>
+</body>
+</html>
